@@ -41,26 +41,26 @@
     <h2>The short version</h2>
     <ul>
       <li><strong>Your to-do content never leaves your phone.</strong> Every slip, task, stamp placement, and setting is stored locally on your device. We have no server, no account system, and no way to read it.</li>
-      <li>The app bundles standard analytics, crash-reporting, and advertising-infrastructure SDKs (listed below) that collect device identifiers on every launch, even though no ads currently display in this build.</li>
+      <li><strong>Slip List shows no advertising and has no in-app purchases.</strong> There is no ad SDK, no attribution SDK, and no advertising identifier collected anywhere in the app.</li>
+      <li>The app uses Firebase (Google) for crash reporting and basic analytics only, described below.</li>
       <li>There is no account to create, and nothing to sign in to.</li>
     </ul>
 
     <h2>Information we do not collect</h2>
-    <p>Slip List does not request or use camera, microphone, contacts, calendar, location, storage, or SMS permissions. We never see the text of your tasks, your stamp choices, your store theme, or any other content you create inside the app, because that data is never transmitted anywhere. There is no login, so we have no name, email address, or phone number tied to your use of the app.</p>
+    <p>Slip List does not request or use camera, microphone, contacts, calendar, location, storage, or SMS permissions. It does not show ads and does not collect your device's advertising ID. We never see the text of your tasks, your stamp choices, your store theme, or any other content you create inside the app, because that data is never transmitted anywhere. There is no login, so we have no name, email address, or phone number tied to your use of the app.</p>
 
     <h2>Information collected by bundled services</h2>
-    <p>Like most free apps, Slip List includes third-party SDKs for analytics, crash reporting, and advertising infrastructure. These SDKs initialize automatically when the app opens and can collect the following on their own behalf:</p>
+    <p>Slip List includes Google's Firebase SDK for crash reporting and basic product analytics. It initializes automatically when the app opens and can collect the following on its own behalf:</p>
     <div class="legal-table-wrap"><table class="legal-table">
       <thead>
         <tr><th>Data type</th><th>Collected via</th><th>Purpose</th></tr>
       </thead>
       <tbody>
-        <tr><td>Device and advertising identifiers</td><td>Google Mobile Ads (AdMob) SDK, AppLovin mediation, Meta (Facebook) SDK, TikTok Business SDK, Adjust</td><td>Analytics, attribution, and advertising infrastructure (no ads currently render in this build)</td></tr>
         <tr><td>Crash logs and diagnostics</td><td>Firebase Crashlytics</td><td>Finding and fixing bugs</td></tr>
         <tr><td>App interactions (screens viewed, taps, session length)</td><td>Firebase Analytics, Firebase Remote Config</td><td>Understanding feature usage, product analytics</td></tr>
       </tbody>
     </table></div>
-    <p>All of the above is transmitted over encrypted HTTPS connections. None of this collection can be individually disabled from inside the app; it happens as part of the standard initialization of these SDKs. We do not sell this data. It may be shared with the providers named above under their own privacy policies, for the analytics and advertising-infrastructure purposes stated.</p>
+    <p>All of the above is transmitted over encrypted HTTPS connections. This collection cannot be individually disabled from inside the app; it happens as part of Firebase's standard initialization. We do not sell this data. It may be shared with Google under its own privacy policy, for the analytics purposes stated.</p>
 
     <h2>Permissions the app requests</h2>
     <div class="legal-table-wrap"><table class="legal-table">
@@ -68,10 +68,9 @@
         <tr><th>Permission</th><th>Why</th></tr>
       </thead>
       <tbody>
-        <tr><td>INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE</td><td>Required by the bundled analytics and ad-infrastructure SDKs listed above</td></tr>
+        <tr><td>INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE</td><td>Required by the Firebase analytics/crash-reporting SDK</td></tr>
         <tr><td>VIBRATE</td><td>Haptic feedback when you tick, print, or tear a task, on/off in Settings</td></tr>
-        <tr><td>Advertising ID (AD_ID / ACCESS_ADSERVICES_*)</td><td>Reserved for the advertising SDKs; no ads currently display</td></tr>
-        <tr><td>POST_NOTIFICATIONS</td><td>Included by a shared internal library; Slip List does not currently send any notifications</td></tr>
+        <tr><td>POST_NOTIFICATIONS</td><td>Reserved for a future notifications feature; Slip List does not currently send any notifications</td></tr>
       </tbody>
     </table></div>
 
