@@ -130,6 +130,13 @@ code, .mono { font-family: var(--font-mono); }
   color: var(--accent-ink);
   border: 1px dashed var(--accent);
 }
+.chip-live { display: inline-flex; white-space: nowrap; align-items: center; gap: 0.35rem; background: var(--accent); color: #fff8ef; border-style: solid; transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
+.chip-live:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.chip-live i { font-size: 0.95rem; }
+@media (max-width: 520px) {
+  .chip-live { padding: 0.45rem; }
+  .chip-live span { display: none; }
+}
 
 /* ===== Hero ===== */
 .hero { padding: 56px 0 88px; overflow: hidden; }
@@ -318,6 +325,7 @@ section { padding: 88px 0; }
 .cta p { color: rgba(253, 246, 234, 0.72); margin-top: 1rem; max-width: 42ch; }
 .cta-actions { margin-top: 2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; }
 .cta-note { margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.82rem; color: rgba(253, 246, 234, 0.5); }
+.cta-note a { color: #fdf6ea; text-decoration: underline; text-decoration-color: rgba(253, 246, 234, 0.35); }
 .cta-card {
   background: rgba(255, 248, 239, 0.06);
   border: 1px solid rgba(255, 248, 239, 0.14);
